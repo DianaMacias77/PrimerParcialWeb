@@ -4,6 +4,7 @@ let router = require('express').Router();
 // Importa el controlador que creamos
 let PagesController = require('../controllers/PagesController');
 let RifasController = require('../controllers/RifasController');
+let DashboardController = require('../controllers/DashboardController');
 // Establece que al hacer una petición GET a la ruta / se conteste
 // con las palabras "Hello World!"
 router.get('/', PagesController.homepage);
@@ -22,5 +23,7 @@ router.get('/rifas/:id/edit', RifasController.edit); //SIRVE
 router.put('/rifas/:id', RifasController.update);
 
 router.delete('/rifas/:id', RifasController.delete);
+
+router.get('/dashboard', DashboardController.dashboard);
 
 module.exports = router;
