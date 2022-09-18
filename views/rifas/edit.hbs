@@ -1,8 +1,8 @@
 <h1>Edit rifa</h1>
-<form method="" action="">
+<form method="POST" action="/rifas/{{ rifa.id }}?_method=PUT">
      <div>
         <label for="ticket">Ticket: </label>
-        <input type="text" id="ticket" ticket="ticket" value="{{ rifa.ticket }}">
+        <input type="text" id="ticket" name="ticket" ticket="ticket" value="{{ rifa.ticket }}">
     </div>
     <div>
         <label for="name">Nombre: </label>
@@ -10,19 +10,18 @@
     </div>
     <div>
         <label for="correo">Correo: </label>
-        <input type="text" id="correo" correo="correo" value="{{ rifa.correo }}">
+        <input type="text" id="correo" name="correo" correo="correo" value="{{ rifa.correo }}">
     </div>
     <div>
         <label for="telefono">Telefono: </label>
-        <input type="text" id="telefono" telefono="telefono" value="{{ rifa.telefono }}">
+        <input type="text" id="telefono"  name="telefono" telefono="telefono" value="{{ rifa.telefono }}">
     </div>
     <div>
         <label for="gift">Gift: </label>
-        <input type="text" id="gift" gift="gift" value="{{ rifa.gift }}">
+        <input type="text" id="gift" name="gift" gift="gift" value="{{ rifa.gift }}">
     </div>
     <div>
         <input type="submit" value="Edit">
     </div>
 </form>
 
-<form method="POST" action="/rifas/{{ rifa.id }}?_method=PUT"></form>

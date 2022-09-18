@@ -14,16 +14,16 @@ router.get('/about', PagesController.about);
 
 router.get('/rifas/create', RifasController.create); //SIRVE
 
-//router.post('/rifas', RifasController.store);
+router.post('/rifas', RifasController.store); //SIRVE
 
 router.get('/rifas/:id', RifasController.show); //SIRVE
 
-router.get('/rifas/:id/edit', RifasController.edit); //SIRVE
+router.get('/rifas/:id/edit', RifasController.edit); //NO SIRVE
 
-router.put('/rifas/:id', RifasController.update);
+router.put('/rifas/:id', RifasController.update); //NO SIRVE
 
-router.delete('/rifas/:id', RifasController.delete);
+router.delete('/rifas/:id', RifasController.delete); //NO SIRVE
 
-router.get('/dashboard', DashboardController.dashboard);
+router.get('/dashboard', DashboardController.dashboard); //SIRVE
 
 module.exports = router;

@@ -4,10 +4,20 @@ let express = require('express');
 // Obtiene una instancia de express
 let app = express();
 
+// index.js
+let bodyParser = require('body-parser');
+
+// ... Otro código que habíamos escrito ...
 // Importa las configuraciones
 let appRoutes = require('./routes/app');
 
+app.use(bodyParser.urlencoded({ extended: true }));
 // Define que configuraciones de rutas se van a utilizar para la ruta
+let methodOverride = require('method-override')
+// sobreescribe el método POST
+app.use(methodOverride('_method'))
+
+
 app.use('/', appRoutes);
 
 // Configuraciones de las vistas
@@ -21,17 +31,12 @@ let hbs = exphbs.create({extname: extNameHbs});
 app.engine(extNameHbs, hbs.engine);
 app.set('view engine', extNameHbs);
 
-// index.js
-let bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
-// ... Otro código que habíamos escrito ...
+
 
 // Importa la configuración de la app
 let appConfig = require('./configs/app');
 
-let methodOverride = require('method-override')
-// sobreescribe el método POST
-app.use(methodOverride('_method'))
+
 
 // Comienza el servidor en el puerto 3000 de localhost
 // para ver el sistema
