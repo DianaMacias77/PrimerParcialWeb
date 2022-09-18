@@ -17,6 +17,12 @@ exports.homepage = (req, res) => {
 }
 
 // Reglas para la respuesta para la petición "/about"
-exports.about = (req, res) => {
-  res.send('About us');
+exports.boleto = (req, res) => {
+  res.render('pages/boleto')
+
 }
+
+exports.ticket = (req, res) => {
+  res.render('pages/ticket')
+}
+

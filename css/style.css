@@ -1,0 +1,46 @@
+.logo{
+    width:240px;
+    height:240px;
+}
+
+.center{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.form-floating{
+    margin: 3px 10px 3px 10px;
+}
+
+.btn{
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.center-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.number {
+    margin: 10px;
+    width: 15%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    font-weight: bold;
+    color: blue;
+    border: antiquewhite;
+    border-radius: 10px;
+    font-size: 50px;
+}

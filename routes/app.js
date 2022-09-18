@@ -1,6 +1,7 @@
 // routes/app.js
 // De express obtiene una instancia del componente Router
 let router = require('express').Router();
+
 // Importa el controlador que creamos
 let PagesController = require('../controllers/PagesController');
 let RifasController = require('../controllers/RifasController');
@@ -9,8 +10,9 @@ let DashboardController = require('../controllers/DashboardController');
 // con las palabras "Hello World!"
 router.get('/', PagesController.homepage);
 
-// Identifica la ruta "/about" y la respuesta de la ruta
-router.get('/about', PagesController.about);
+// Identifica la ruta "/boleto" y la respuesta de la ruta
+router.get('/boleto', PagesController.boleto);
+router.get('/ticket', PagesController.ticket);
 
 router.get('/rifas/create', RifasController.create); //SIRVE
 

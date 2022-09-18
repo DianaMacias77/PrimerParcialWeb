@@ -10,6 +10,9 @@ let appRoutes = require('./routes/app');
 // Define que configuraciones de rutas se van a utilizar para la ruta
 app.use('/', appRoutes);
 
+app.use(express.static('css'));
+app.use(express.static('img'));
+
 // Configuraciones de las vistas
 let exphbs = require('express-handlebars');
 // Define la extensión que se va a utilizar para los archivos que representan
@@ -20,6 +23,7 @@ let hbs = exphbs.create({extname: extNameHbs});
 // Establece el uso de handlebars dentro de express.js
 app.engine(extNameHbs, hbs.engine);
 app.set('view engine', extNameHbs);
+
 
 // index.js
 let bodyParser = require('body-parser');
