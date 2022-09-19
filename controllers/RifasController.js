@@ -1,3 +1,5 @@
+let RifaModel = require('../models/Rifa')
+
 exports.create = (req, res) => {
   res.render('rifas/create');
 }
@@ -7,8 +9,6 @@ exports.store = (req, res) => {
   console.log(req.body);
   res.send('Rifa almacenada');
 }
-
-let RifaModel = require('../models/Rifa')
 // ...
 // Almacena el producto
 exports.store = (req, res) => {

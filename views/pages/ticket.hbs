@@ -1,4 +1,4 @@
-<div class="center">
+        <div class="center">
             <img class="logo" src="Logo.png"/>
         </div>
         <h1 class="display-5 fw-bold">Rifa decembrina 2022</h1>
@@ -7,21 +7,24 @@
             <div class="card px-1 py-4">
                 <h2 class="center">INGRESA EL NÚMERO DE TICKET</h2>
                 <div class="form-floating">
-                    <input type="ticket" class="form-control" id="ticket" placeholder="REFERENCIA (TICKET)">
-                    <label for="name">REFERENCIA (TICKET)</label>
+                    <form method="POST" action="/rifas">
+                        <input type="ticket" class="form-control" id="ticket" placeholder="REFERENCIA (TICKET)">
+                        <br>
+                        <div class="center">
+                            <input type="submit" class="btn btn-primary" value="VER MI BOLETO">
+                        </div>
+                        
+                    </form>
                 </div>
                 <br>
-                <div class="center">
-                    <a class="btn btn-primary" href="boleto.html">VER MI BOLETO</a>
-                </div>
+
             </div>
         </div>
     </body>
     <br>
     <a class="center" href="/">Volver a la página inicial</a>
     <br>
-    <a class="center" href="/">Registrar mis datos</a>
+    <a class="center" href="/rifas/create">Registrar mis datos</a>
     <br>
-    <a class="center" href="ticketMal.html">Link código mal</a>
+    <a class="center" href="/dashboard">Link dashboard</a>
     <br>
-    

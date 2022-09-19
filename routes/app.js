@@ -6,13 +6,19 @@ let router = require('express').Router();
 let PagesController = require('../controllers/PagesController');
 let RifasController = require('../controllers/RifasController');
 let DashboardController = require('../controllers/DashboardController');
+let TicketController = require('../controllers/TicketController');
 // Establece que al hacer una petición GET a la ruta / se conteste
-// con las palabras "Hello World!"
-router.get('/', PagesController.homepage);
 
-// Identifica la ruta "/boleto" y la respuesta de la ruta
+//PagesController
+router.get('/', PagesController.homepage);
 router.get('/boleto', PagesController.boleto);
 router.get('/ticket', PagesController.ticket);
+
+//TicketController
+router.get('/rifas/:id', TicketController.tick);
+
+//RifasController
+router.get('/rifas/:id', RifasController.show);
 
 router.get('/rifas/create', RifasController.create); //SIRVE
 
