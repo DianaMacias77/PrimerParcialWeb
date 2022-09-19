@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-exports.homepage = (req, res) => {
-    res.render('pages/homepage')
-}
-
-exports.about = (req, res) => {
-    res.send('About us')
-}
-=======
 // controllers/PagesController.js
 // Importa el modelo de productos
 let RifaModel = require('../models/Rifa')
@@ -35,4 +26,3 @@ exports.ticket = (req, res) => {
   res.render('pages/ticket')
 }
 
->>>>>>> diana
