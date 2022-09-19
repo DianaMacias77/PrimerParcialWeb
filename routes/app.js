@@ -18,11 +18,11 @@ router.post('/rifas', RifasController.store); //SIRVE
 
 router.get('/rifas/:id', RifasController.show); //SIRVE
 
-router.get('/rifas/:id/edit', RifasController.edit); //NO SIRVE
+router.get('/rifas/:id/edit', RifasController.edit); //SIRVE
 
-router.put('/rifas/:id', RifasController.update); //NO SIRVE
+router.put('/rifas/:id', RifasController.update); //SIRVE
 
-router.delete('/rifas/:id', RifasController.delete); //NO SIRVE
+router.delete('/rifas/:id', RifasController.delete); //SIRVE
 
 router.get('/dashboard', DashboardController.dashboard); //SIRVE
 
