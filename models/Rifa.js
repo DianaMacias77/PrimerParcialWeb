@@ -32,11 +32,11 @@ exports.create = (rifa) => {
       });
 }
 
-exports.find = (id) => {
+exports.find = (ticket) => {
     return knex
       .select('*')
       .from('rifa')
-      .where('id', id)
+      .where('ticket', ticket)
       .first();
   }
 

@@ -4,11 +4,6 @@ exports.create = (req, res) => {
   res.render('rifas/create');
 }
 
-// Almacena el producto
-exports.store = (req, res) => {
-  console.log(req.body);
-  res.send('Rifa almacenada');
-}
 // ...
 // Almacena el producto
 exports.store = (req, res) => {
@@ -44,6 +39,19 @@ exports.show = (req, res) => {
     // con la información del producto
     res.render('rifas/show', {rifa: rifa});
   });
+}
+
+exports.showTicket = (req, res) => {
+
+  let ref = req.body.ticket;
+
+  RifaModel.find(ref).then((rifa) => {
+    if (rifa == null) {
+      res.status(404).send('not found');
+      return;
+    }
+    res.render('rifas/show', { rifa: rifa });
+  })
 }
 
 exports.edit = (req, res) => {

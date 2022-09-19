@@ -18,11 +18,11 @@ router.get('/ticket', PagesController.ticket);
 router.get('/rifas/:id', TicketController.tick);
 
 //RifasController
-router.get('/rifas/:id', RifasController.show);
+router.get('/rifas/:id', RifasController.showTicket);
 
 router.get('/rifas/create', RifasController.create); //SIRVE
 
-router.post('/rifas', RifasController.store); //SIRVE
+router.post('/rifas', RifasController.showTicket); //SIRVE
 
 router.get('/rifas/:id', RifasController.show); //SIRVE
 
