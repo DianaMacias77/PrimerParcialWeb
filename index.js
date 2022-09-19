@@ -20,6 +20,9 @@ app.use(methodOverride('_method'))
 
 app.use('/', appRoutes);
 
+app.use(express.static('css'));
+app.use(express.static('img'));
+
 // Configuraciones de las vistas
 let exphbs = require('express-handlebars');
 // Define la extensión que se va a utilizar para los archivos que representan

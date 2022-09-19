@@ -7,8 +7,8 @@ module.exports = {
     client: 'mysql2',
     connection: {
       host: process.env.DB_DEVELOPMENT_HOST || 'localhost',
-      port: process.env.DB_DEVELOPMENT_PORT || '3307',
-      database: process.env.DB_DEVELOPMENT_NAME || 'my_db',
+      port: process.env.DB_DEVELOPMENT_PORT || '3306',
+      database: process.env.DB_DEVELOPMENT_NAME || 'yakult',
       user:  process.env.DB_DEVELOPMENT_USER || 'root',
       password: process.env.DB_DEVELOPMENT_PASSWORD || 'root'
     },
@@ -24,8 +24,8 @@ module.exports = {
     client: 'mysql2',
     connection: {
       host: process.env.DB_PRODUCTION_HOST || 'localhost',
-      port: process.env.DB_PRODUCTION_PORT || '3307',
-      database: process.env.DB_PRODUCTION_NAME || 'my_db',
+      port: process.env.DB_PRODUCTION_PORT || '3306',
+      database: process.env.DB_PRODUCTION_NAME || 'yakult',
       user:  process.env.DB_PRODUCTION_USER || 'root',
       password: process.env.DB_PRODUCTION_PASSWORD || 'root'
     },

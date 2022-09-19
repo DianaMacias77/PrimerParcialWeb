@@ -1,16 +1,24 @@
 // routes/app.js
 // De express obtiene una instancia del componente Router
 let router = require('express').Router();
+
 // Importa el controlador que creamos
 let PagesController = require('../controllers/PagesController');
 let RifasController = require('../controllers/RifasController');
 let DashboardController = require('../controllers/DashboardController');
+let TicketController = require('../controllers/TicketController');
 // Establece que al hacer una petición GET a la ruta / se conteste
-// con las palabras "Hello World!"
-router.get('/', PagesController.homepage);
 
-// Identifica la ruta "/about" y la respuesta de la ruta
-router.get('/about', PagesController.about);
+//PagesController
+router.get('/', PagesController.homepage);
+router.get('/boleto', PagesController.boleto);
+router.get('/ticket', PagesController.ticket);
+
+//TicketController
+router.get('/rifas/:id', TicketController.tick);
+
+//RifasController
+router.get('/rifas/:id', RifasController.show);
 
 router.get('/rifas/create', RifasController.create); //SIRVE
 
@@ -24,6 +32,10 @@ router.put('/rifas/:id', RifasController.update); //SIRVE
 
 router.delete('/rifas/:id', RifasController.delete); //SIRVE
 
+<<<<<<< HEAD
 router.get('/dashboard', DashboardController.dashboard); //SIRVE
+=======
+router.get('/dashboard', DashboardController.dashboard);//SIRVE
+>>>>>>> origin/jmf
 
 module.exports = router;
