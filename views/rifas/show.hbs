@@ -1,0 +1,55 @@
+
+
+<div class="center">
+            <img class="logo" src="Logo.png"/>
+        </div>
+        <h1 class="display-5 fw-bold">Rifa decembrina 2022</h1>
+        <br>
+        <div class="center-row">
+            <div class="number">
+                <p>{{rifa.gift.[0]}}</p>
+            </div>
+            <div class="number">
+                <p>{{rifa.gift.[1]}}</p>
+            </div>
+            <div class="number">
+                <p>{{rifa.gift.[2]}}</p>
+            </div>
+            <div class="number">
+                <p>{{rifa.gift.[3]}}</p>
+            </div>
+        </div>
+    </body>
+    <br>
+
+<div class="center">
+    <table>
+    <tr>
+        <th>Ticket</th>
+        <td>{{rifa.ticket}}</td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td>{{rifa.name}}</td>
+    </tr>
+    <tr>
+        <th>Correo</th>
+        <td>{{rifa.correo}}</td>
+    </tr>
+    <tr>
+        <th>Telefono</th>
+        <td>{{rifa.telefono}}</td>
+    </tr>
+    <th></th>
+        <td>
+            <!--
+            <form method="POST" action="/rifas/{{ rifa.id }}?_method=DELETE">
+                <input type="submit" value="DELETE ?">
+            </form>
+            -->
+        </td>
+</table>
+</div>
+<br>
+
+ <a class="center" href="/">Volver a la página inicial</a>

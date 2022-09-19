@@ -1,0 +1,28 @@
+<h1>Agrega los campos faltantes</h1>
+<form method="POST" action="/rifas/{{ rifa.id }}?_method=PUT">
+     <div>
+        <label for="ticket">Ticket: </label>
+        <input type="text" id="ticket" name="ticket" ticket="ticket" value="{{ rifa.ticket }}">
+    </div>
+    <div>
+        <label for="name">Nombre: </label>
+        <input type="text" id="name" name="name" value="{{ rifa.name }}">
+    </div>
+    <div>
+        <label for="correo">Correo: </label>
+        <input type="text" id="correo" name="correo" correo="correo" value="{{ rifa.correo }}">
+    </div>
+    <div>
+        <label for="telefono">Telefono: </label>
+        <input type="text" id="telefono"  name="telefono" telefono="telefono" value="{{ rifa.telefono }}">
+    </div>
+    <!--
+    <div>
+        <label for="gift">Gift: </label>
+        <input type="text" id="gift" name="gift" gift="gift" value="{{ rifa.gift }}">
+    </div>
+    -->
+    <div>
+        <input type="submit" value="Edit">
+    </div>
+</form>
