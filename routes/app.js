@@ -16,7 +16,7 @@ router.get('/ticket', PagesController.ticket);
 
 router.get('/rifas/create', RifasController.create); //SIRVE
 
-//router.post('/rifas', RifasController.store);
+router.post('/rifas', RifasController.store); //SIRVE
 
 router.get('/rifas/:id', RifasController.show); //SIRVE
 
@@ -26,6 +26,6 @@ router.put('/rifas/:id', RifasController.update);
 
 router.delete('/rifas/:id', RifasController.delete);
 
-router.get('/dashboard', DashboardController.dashboard);
+router.get('/dashboard', DashboardController.dashboard);//SIRVE
 
 module.exports = router;
