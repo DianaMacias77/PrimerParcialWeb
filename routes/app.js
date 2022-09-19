@@ -5,7 +5,6 @@ let router = require('express').Router();
 let PagesController = require('../controllers/PagesController');
 let RifasController = require('../controllers/RifasController');
 let DashboardController = require('../controllers/DashboardController');
-let LoginController = require('../controllers/LoginController');
 // Establece que al hacer una petición GET a la ruta / se conteste
 // con las palabras "Hello World!"
 router.get('/', PagesController.homepage);
