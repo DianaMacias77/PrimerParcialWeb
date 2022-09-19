@@ -20,9 +20,10 @@ router.get('/rifas/:id', TicketController.tick);
 //RifasController
 router.get('/rifas/:id', RifasController.showTicket);
 
-router.get('/rifas/create', RifasController.create); //SIRVE
+router.get('/rifas/create', RifasController.store); //SIRVE
 
 router.post('/rifas', RifasController.showTicket); //SIRVE
+
 
 router.get('/rifas/:id', RifasController.show); //SIRVE
 

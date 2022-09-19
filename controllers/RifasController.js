@@ -1,27 +1,23 @@
 let RifaModel = require('../models/Rifa')
 
-exports.create = (req, res) => {
-  res.render('rifas/create');
-}
-
 // ...
 // Almacena el producto
 exports.store = (req, res) => {
 // Crea un objeto con la información del usuario
-let rifa = {
-  ticket: req.body.ticket,
-  name: req.body.name,
-  correo: req.body.correo,
-  telefono: req.body.telefono,
-  gift: req.body.gift
-};
+  let rifa = {
+    ticket: req.body.ticket,
+    name: req.body.name,
+    correo: req.body.correo,
+    telefono: req.body.telefono,
+    //gift: req.body.gift
+  };
 
-RifaModel.create(rifa)
-  .then((id) => {
-    // Al finalizar la creación, reenvía al usuario a la página
-    // inicial
-    res.redirect('/');
-  });
+  RifaModel.create(rifa)
+    .then((id) => {
+      // Al finalizar la creación, reenvía al usuario a la página
+      // inicial
+      res.redirect('/');
+    });
 }
 
 exports.show = (req, res) => {
@@ -44,11 +40,12 @@ exports.show = (req, res) => {
 exports.showTicket = (req, res) => {
 
   let ref = req.body.ticket;
-
   RifaModel.find(ref).then((rifa) => {
     if (rifa == null) {
-      res.status(404).send('not found');
-      return;
+      //res.status(404).send('not found');
+      return res.render('rifas/create', { rifa: rifa });
+    }else if((rifa.ticket != null) && (rifa.telefono == null)){
+      return res.render('rifas/edit', { rifa: rifa });
     }
     res.render('rifas/show', { rifa: rifa });
   })

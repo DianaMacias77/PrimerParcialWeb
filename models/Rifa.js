@@ -28,7 +28,7 @@ exports.create = (rifa) => {
         name: rifa.name,
         correo: rifa.correo,
         telefono: rifa.telefono,
-        gift: rifa.gift
+        //gift: rifa.gift
       });
 }
 
