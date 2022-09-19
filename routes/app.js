@@ -32,10 +32,6 @@ router.put('/rifas/:id', RifasController.update); //SIRVE
 
 router.delete('/rifas/:id', RifasController.delete); //SIRVE
 
-<<<<<<< HEAD
-router.get('/dashboard', DashboardController.dashboard); //SIRVE
-=======
 router.get('/dashboard', DashboardController.dashboard);//SIRVE
->>>>>>> origin/jmf
 
 module.exports = router;

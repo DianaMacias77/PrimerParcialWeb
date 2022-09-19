@@ -66,7 +66,6 @@ exports.edit = (req, res) => {
 exports.update = (req, res) => {
 // Obtiene el id que viene en la url
 console.log('entrando');
-<<<<<<< HEAD
   let id = req.params.id;
 // Busca dentro de la base de datos el producto con el id indicado
   RifaModel.find(id).then((rifa) => {
@@ -88,55 +87,11 @@ console.log('entrando');
   console.log(updateRifa);
   // Actualiza los datos del producto
   RifaModel.update(rifa.id, updateRifa)
-=======
-let id = req.params.id;
-// Busca dentro de la base de datos el producto con el id indicado
-RifaModel.find(id).then((rifa) => {
-// Si el producto no existe entonces
-if (rifa == null) {
-  // Regresa el error 404
-  res.status(404).send('Not found');
-  return;
-}
-
-// Define los datos del producto actualizado
-let updateRifa= {
-  ticket: req.body.ticket,
-  name: req.body.name,
-  correo: req.body.correo,
-  telefono: req.body.telefono,
-  gift: req.body.gift
-}
-console.log(updateRifa);
-// Actualiza los datos del producto
-RifaModel.update(rifa.id, updateRifa)
   .then((id) => {
     // Al terminar redirige el índice
     res.redirect('/');
   });
 });
-}
-
-exports.delete = (req, res) => {
-// Obtiene el id que viene en la url
-let id = req.params.id;
-// Busca dentro de la base de datos el producto con el id indicado
-RifaModel.find(id).then((rifa) => {
-  // Si el producto no existe entonces
-  if (rifa == null) {
-    // Regresa el error 404
-    res.status(404).send('Not found');
-    return;
-  }
-  // Elimina los datos del producto
-  RifaModel.delete(rifa.id)
->>>>>>> origin/jmf
-    .then((id) => {
-      // Al terminar redirige el índice
-      res.redirect('/');
-    });
-});
-<<<<<<< HEAD
 }
 
 exports.delete = (req, res) => {
@@ -158,6 +113,3 @@ exports.delete = (req, res) => {
       });
   });
 }
-=======
-}
->>>>>>> origin/jmf
