@@ -58,9 +58,9 @@ exports.showTicket = (req, res) => {
 
 exports.edit = (req, res) => {
   // Obtiene el id que viene en la url
-  let id = req.params.id;
+  let ticket = req.body.ticket;
   // Busca dentro de la base de datos el producto con el id indicado
-  RifaModel.find(id).then((rifa) => {
+  RifaModel.find(ticket).then((rifa) => {
     // Si el producto no existe entonces
     if (rifa == null) {
       // Regresa el error 404
@@ -92,12 +92,12 @@ exports.update = (req, res) => {
       name: req.body.name,
       correo: req.body.correo,
       telefono: req.body.telefono,
-      gift: req.body.gift
+      //gift: req.body.gift
     }
     console.log(updateRifa);
     // Actualiza los datos del producto
-    RifaModel.update(rifa.id, updateRifa)
-      .then((id) => {
+    RifaModel.update(rifa.ticket, updateRifa)
+      .then((ticket) => {
         // Al terminar redirige el índice
         res.redirect('/');
       });

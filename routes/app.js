@@ -29,7 +29,7 @@ router.get('/rifas/:id', RifasController.show); //SIRVE
 
 router.get('/rifas/:id/edit', RifasController.edit); //SIRVE
 
-router.put('/rifas/:id', RifasController.update); //SIRVE
+router.put('/rifas/:ticket', RifasController.update); //SIRVE
 
 router.delete('/rifas/:id', RifasController.delete); //SIRVE
 
