@@ -40,11 +40,11 @@ exports.find = (ticket) => {
       .first();
   }
 
-exports.update = (id, rifa) => {
+exports.update = (ticket, rifa) => {
     return knex('rifa')
       .update(rifa)
       .update('updated_at', knex.fn.now())
-      .where('id', id);
+      .where('ticket', ticket);
 }
 
 exports.delete = (id) => {

@@ -49,8 +49,8 @@ exports.showTicket = (req, res) => {
     if (rifa == null) {
       res.status(404).send('not found');
       return;
-    } if (rifa != null && rifa.telefono == '') {
-      return res.render('rifas/create', { rifa: rifa });
+    } if (rifa != null && rifa.telefono == ' ') {
+      return res.render('rifas/edit', { rifa: rifa });
     }
     res.render('rifas/show', { rifa: rifa });
   });
@@ -76,9 +76,9 @@ exports.edit = (req, res) => {
 exports.update = (req, res) => {
   // Obtiene el id que viene en la url
   console.log('entrando');
-  let id = req.params.id;
+  let ticket = req.body.ticket;
   // Busca dentro de la base de datos el producto con el id indicado
-  RifaModel.find(id).then((rifa) => {
+  RifaModel.find(ticket).then((rifa) => {
     // Si el producto no existe entonces
     if (rifa == null) {
       // Regresa el error 404

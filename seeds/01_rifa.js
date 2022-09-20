@@ -14,7 +14,8 @@ exports.seed = function(knex) {
         { ticket:'5291', name: 'Beatriz', correo: 'b3ty@yahoo.com', telefono: '5231407796', gift:'6218' },
         { ticket:'7120', name: 'Diana', correo: 'dianaa@yahoo.com', telefono: '5532995420', gift:'7321' },
         { ticket:'8014', name: 'Julieta', correo: 'juliet4@yahoo.com', telefono: '7773204198', gift:'8765' },
-        { ticket:'1143', name: 'Paola', correo: 'paola@yahoo.com', telefono: '55556105205', gift:'1043' }
+        { ticket:'1143', name: 'Paola', correo: 'paola@yahoo.com', telefono: '5555610520', gift:'1043' },
+        {ticket: '1111', name: ' ', correo: ' ', telefono: ' ', gift: ' ' }
       ]);
     });
 };
